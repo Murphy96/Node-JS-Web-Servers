@@ -37,6 +37,7 @@ const server = http.createServer(function(req,res){
         const vec = path.split('.');
         const extension = vec[vec.length-1];
         const minearchivo = mine[extension];
+        console.log("cliente conenctado");
         res.writeHead(200 , {'Content-Type':minearchivo});
         res.write(data);
         return res.end();
